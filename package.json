@@ -1,0 +1,17 @@
+{
+  "name": "drizzle-zero-bug-repro",
+  "version": "1.0.0",
+  "description": "Minimal reproduction of drizzle-zero bug where PgDateString maps to number instead of string",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "generate": "drizzle-zero generate --schema ./schema.ts --output ./generated-schema.ts",
+    "demonstrate": "node demonstrate-bug.js",
+    "repro": "npm run generate && npm run demonstrate"
+  },
+  "dependencies": {
+    "@rocicorp/zero": "0.22.2025081300",
+    "drizzle-orm": "0.44.4",
+    "drizzle-zero": "0.13.3"
+  }
+}
